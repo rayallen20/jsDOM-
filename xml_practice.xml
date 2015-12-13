@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+分析 rss是根节点 自己有一个属性 version 属性值是字符串 类型是必选 因为没有东西是不要求版本的
+下边必须包含channel节点 1个
+channel节点下 title link description 必须有 language或者item 二选一 其中item可以有多个
+item节点下 必须有 title link pubDate description
+ title link description language pubDate 只包含文本
+-->
+<!DOCTYPE rss[
+        <!ELEMENT rss (channel)>
+        <!ELEMENT channel (title,link,description,(language|item)*)>
+        <!ELEMENT item (title,link,pubDate,description)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT link (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT language (#PCDATA)>
+        <!ELEMENT pubDate (#PCDATA)>
+        <!ATTLIST rss version CDATA #REQUIRED>
+        ]>
+<rss version="2.0">
+    <channel>
+        <title>title1</title>
+        <link>url1</link>
+        <description>script1</description>
+        <language>zn-cn1</language>
+        <item>
+            <title>title2</title>
+            <link>url2</link>
+            <pubDate>2010-09-20</pubDate>
+            <description>script2</description>
+        </item>
+        <item>
+            <title>title3</title>
+            <link>url3</link>
+            <pubDate>2010-09-20</pubDate>
+            <description>script3</description>
+        </item>
+    </channel>
+</rss>

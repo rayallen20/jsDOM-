@@ -1,0 +1,39 @@
+<!DOCTYPE newspaper[
+        <!ELEMENT newspaper (article+)>
+        <!ELEMENT article (heading,byline,lead,body,notes)>
+        <!ELEMENT heading (#PCDATA)>
+        <!ELEMENT byline (#PCDATA)>
+        <!ELEMENT lead (#PCDATA)>
+        <!ELEMENT body (#PCDATA)>
+        <!ELEMENT notes (#PCDATA)>
+        <!ATTLIST article author CDATA #REQUIRED>
+        <!ATTLIST article editor CDATA #IMPLIED>
+        <!ATTLIST article date CDATA #IMPLIED>
+        <!ATTLIST article edition CDATA #IMPLIED>
+        <!ENTITY newspaper "Vervet Logic Times">
+        <!ENTITY publisher "Vervet Logic Press">
+        <!ENTITY copyright "Copyright 1998 Vervet Logic Press">
+        ]>
+<newspaper>
+    <article author="chunge" editor="zengge" edition="chungebao" date="zuotian">
+        <heading>head &copyright;</heading>
+        <byline>byline &newspaper;</byline>
+        <lead>lead &publisher;</lead>
+        <body>body</body>
+        <notes>notes</notes>
+    </article>
+    <article author="chunge" edition="chungebao" date="jintian">
+        <heading>head</heading>
+        <byline>byline</byline>
+        <lead>lead</lead>
+        <body>body</body>
+        <notes>notes</notes>
+    </article>
+    <article author="chunge">
+        <heading>head</heading>
+        <byline>byline</byline>
+        <lead>lead</lead>
+        <body>body</body>
+        <notes>notes</notes>
+    </article>
+</newspaper>
